@@ -5,7 +5,7 @@ Complete photo review application built with AWS and Terraform.
 ## Directory Structure
 
 ```
-photo-scanner/
+photo-reviewer/
 ├── terraform/                      # Infrastructure as Code
 │   ├── main.tf                    # Core Terraform configuration
 │   ├── variables.tf               # Input variables
