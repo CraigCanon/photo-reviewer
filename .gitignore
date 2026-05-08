@@ -1,0 +1,79 @@
+# Git ignore rules - prevents accidental commits of secrets and build artifacts
+
+# Terraform files (contains sensitive values)
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/terraform.tfvars          # IMPORTANT: Contains secrets
+terraform/terraform.tfstate*
+terraform/tfplan
+terraform/crash.log
+terraform/override.tf
+
+# AWS credentials
+.aws/
+.aws-credentials
+aws_credentials
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.production.local
+
+# Python
+backend/venv/
+backend/env/
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/*.egg-info/
+backend/dist/
+backend/build/
+backend/*.zip
+backend/build/
+backend/.pytest_cache/
+backend/.coverage
+
+# Node.js
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.production.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.iml
+.project
+.pydevproject
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Secrets Manager export backups
+secrets-backup/
+*.backup
+*-backup.json
+
+# CI/CD artifacts
+.github/workflows/*.local
+ci-artifacts/
