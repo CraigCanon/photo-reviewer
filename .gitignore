@@ -3,7 +3,7 @@
 # Terraform files (contains sensitive values)
 terraform/.terraform/
 terraform/.terraform.lock.hcl
-terraform/terraform.tfvars          # IMPORTANT: Contains secrets
+terraform/terraform.tfvars
 terraform/terraform.tfstate*
 terraform/tfplan
 terraform/crash.log
